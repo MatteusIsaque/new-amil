@@ -1,7 +1,7 @@
 import { Box, Text, Flex, Input, Stack, Grid, GridItem } from '@chakra-ui/react'
 import ButtonCompoent from './components/button'
 
-import { TextAndButton } from './components/textAndIcon'
+import TextAndButton from './components/textAndIcon'
 import Image from 'next/image'
 
 import Logo from './img/ami.jpg'

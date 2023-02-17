@@ -5,7 +5,7 @@ interface TextAndButton extends FlexProps {
   text: string
 }
 
-export function TextAndButton({text, ...rest}:TextAndButton) {
+export default function TextAndButton({text, ...rest}:TextAndButton) {
 
   return (
     <Flex justifyContent='center' alignItems='center' {...rest}>
