@@ -5,6 +5,10 @@ import TextAndButton from './components/textAndIcon'
 import Image from 'next/image'
 
 import Logo from './img/ami.jpg'
+import Dowload from './img/download.jpg'
+import Capa from './img/capa.jpg'
+
+
 import Link from 'next/link'
 
 export default function Index() {
@@ -20,7 +24,9 @@ export default function Index() {
         <Text textAlign='center'>Realize sua cotação expressa que um profissional de amil dental entrará em contato com você!</Text>
       </Flex>
 
-      <Grid id='form' gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }} px='10%' py={{ base: '100px', md: '200px' }}>
+      <Grid id='form'
+      style={{backgroundImage:`url(${Capa})`}}
+      gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }} px='10%' py={{ base: '100px', md: '200px' }}>
         <GridItem py={{ base: '40px', sm: '60px', lg: '75px' }} px={{ base: '20px', sm: '40px', lg: '75px' }} bgColor='teal.500'>
           <Stack as='form' spacing='4' textAlign='center' color='teal.500'>
             <Text fontSize='24px' fontWeight='800' color='white'>PLANOS A PARTIR DE 1,00$ POR DIA</Text>
@@ -110,7 +116,7 @@ export default function Index() {
       </Box>
 
       <Link href='/'>
-        <Box id='end' w='100%' h='350px'>
+        <Box id='end' style={{backgroundImage:`url(${Dowload})`}} w='100%' h='350px'>
         </Box>
       </Link>
 
