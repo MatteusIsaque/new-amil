@@ -1,15 +1,13 @@
-import { Box, Text, Flex, Input, Stack, Button, Grid, GridItem, Icon } from '@chakra-ui/react'
+import { Box, Text, Flex, Input, Stack, Grid, GridItem } from '@chakra-ui/react'
 import ButtonCompoent from './components/button'
 
-import { BsCheckLg } from 'react-icons/bs'
 import { TextAndButton } from './components/textAndIcon'
 import Image from 'next/image'
 
 import Logo from './img/ami.jpg'
-import end from './img/download.jpg'
 import Link from 'next/link'
 
-export default function index() {
+export default function Index() {
 
   return (
     <Box as='main'>
