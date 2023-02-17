@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 #form{
-  background-image: url('../pages/img/capa.jpg');
+  background-image: url('./../pages/img/capa.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 #end{
-  background-image: url('../pages/img/download.jpg');
+  background-image: url('./../pages/img/download.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,14 +18,14 @@
 @media(max-width: 767px){
   
 #form{
-  background-image: url('../pages/img/capa-cel.jpg');
+  background-image: url('./../pages/img/capa-cel.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 #end{
-  background-image: url('../pages/img/download.jpg');
+  background-image: url('./../pages/img/download.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
