@@ -25,7 +25,7 @@ export default function Index() {
       </Flex>
 
       <Grid id='form'
-      style={{backgroundImage:`url(${Capa})`}}
+      style={{backgroundImage:`url(${Capa.src})`}}
       gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }} px='10%' py={{ base: '100px', md: '200px' }}>
         <GridItem py={{ base: '40px', sm: '60px', lg: '75px' }} px={{ base: '20px', sm: '40px', lg: '75px' }} bgColor='teal.500'>
           <Stack as='form' spacing='4' textAlign='center' color='teal.500'>
@@ -116,7 +116,7 @@ export default function Index() {
       </Box>
 
       <Link href='/'>
-        <Box id='end' style={{backgroundImage:`url(${Dowload})`}} w='100%' h='350px'>
+        <Box id='end' style={{backgroundImage:`url(${Dowload.src})`}} w='100%' h='350px'>
         </Box>
       </Link>
 
