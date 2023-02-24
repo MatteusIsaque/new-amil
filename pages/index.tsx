@@ -14,6 +14,7 @@ import Link from 'next/link'
 import { FormEvent, useState } from 'react'
 import axios from 'axios'
 import Router from 'next/router'
+import ZapButton from './components/zapButton'
 
 export default function Index() {
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
@@ -115,7 +116,7 @@ export default function Index() {
               <Text fontSize={{ base: '40px', lg: '60px' }} fontWeight={700}>R$ 39,90</Text>
               <Text fontSize='20px'>por mês/vida</Text>
             </Box>
-            <Link style={{ width: '100%' }} href='https://wa.me/5511961062860'>
+            <Link style={{ width: '100%' }} href='/?couter=#form'>
               <ButtonCompoent w='100%' mt='40px' text='Falar com atendente' />
             </Link>
           </Flex>
@@ -137,7 +138,7 @@ export default function Index() {
               <Text fontSize='20px'>por mês/vida</Text>
             </Box>
 
-            <Link style={{ width: '100%' }} href='https://wa.me/5511961062860'>
+            <Link style={{ width: '100%' }} href='/?couter=#form'>
               <ButtonCompoent w='100%' mt='40px' text='Falar com atendente' />
             </Link>
           </Flex>
@@ -160,6 +161,7 @@ export default function Index() {
       <Box bgColor='teal.500' w='100%' textAlign='center' color='white' py='2'>
         <Text fontSize='14px'>Todos os direitos reservados aos seus criadores</Text>
       </Box>
+      <ZapButton />
     </Box>
   )
 }
