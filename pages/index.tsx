@@ -11,8 +11,9 @@ import Capa from './img/capa.jpg'
 
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { FormEvent, useState } from 'react'
 import axios from 'axios'
+import Router from 'next/router'
 
 export default function Index() {
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
@@ -22,8 +23,10 @@ export default function Index() {
 
 
 
-  async function handleForm(){
-    axios.post(`${process.env.FORM_LINK}/ticonnected`, {
+  async function handleForm(e:FormEvent){
+
+    e.preventDefault()
+   await axios.post(`${process.env.FORM_LINK}/ticonnected`, {
       emailTo: "matteus.isaque28@gmail.com",
       title: "campanha isaques estúdios",
       domain:"https://new-amil.vercel.app/",
@@ -32,6 +35,7 @@ export default function Index() {
       email
     })
 
+    Router.reload()
   }
 
   return (
