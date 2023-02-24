@@ -1,4 +1,4 @@
-import { Box, Text, Flex, Input, Stack, Grid, GridItem, useMediaQuery } from '@chakra-ui/react'
+import { Box, Text, Flex, Input, Stack, Grid, GridItem, useMediaQuery, Textarea } from '@chakra-ui/react'
 import ButtonCompoent from './components/button'
 
 import TextAndButton from './components/textAndIcon'
@@ -20,6 +20,7 @@ export default function Index() {
   const [name, setName] = useState<String>()
   const [number, setNumber] = useState<Number>()
   const [email, setEmail] = useState<String>()
+  const [message, setMessage] = useState<String>()
 
 
 
@@ -27,7 +28,7 @@ export default function Index() {
 
     e.preventDefault()
    await axios.post(`https://main-form.herokuapp.com/ticonnected`, {
-      emailTo: "matteus.isaque28@gmail.com",
+      emailTo: "marcioapqueiroz@gmail.com",
       title: "campanha isaques estúdios",
       domain:"https://new-amil.vercel.app/",
       name,
@@ -40,26 +41,27 @@ export default function Index() {
 
   return (
     <Box as='main'>
-      <Flex h='100px' w='100%' justifyContent='center' alignItems='center' bgColor='#494fff'>
-        <Image alt='logo-amil' src={Logo} height={100} />
+      <Flex h='60px' w='100%' justifyContent='center' alignItems='center' bgColor='#494fff'>
+        <Image alt='logo-amil' src={Logo} height={60} />
       </Flex>
 
-      <Flex px='10%' w='100%' py='20px' justifyContent='center' alignItems='center' flexDirection='column' bgColor='teal.500' color='white'>
-        <Text as='h1' fontSize='24px' fontWeight='700' textAlign='center'>Cote agora mesmo sem compromisso!</Text>
+      <Flex px='10%' w='100%' py={{base:'10px', sm:'20px'}} justifyContent='center' alignItems='center' flexDirection='column' bgColor='teal.500' color='white'>
+        <Text as='h1' fontSize={{base:'20px', sm:'24px'}} fontWeight='700' textAlign='center'>Cote agora mesmo sem compromisso!</Text>
         <Text textAlign='center'>Realize sua cotação expressa que um profissional de amil dental entrará em contato com você!</Text>
       </Flex>
 
       <Grid id='form'
         style={{ backgroundImage: `url(${Capa.src})` }}
-        gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }} px='10%' py={{ base: '100px', md: '200px' }}>
-        <GridItem py={{ base: '40px', sm: '60px', lg: '75px' }} px={{ base: '20px', sm: '40px', lg: '75px' }} bgColor='teal.500'>
+        gridTemplateColumns={{ base: '1fr', lg: '1fr 1fr' }} px='10%' py={{ base: '50px', md: '200px' }}>
+        <GridItem py={{ base: '20px', sm: '60px', lg: '75px' }} px={{ base: '20px', sm: '40px', lg: '75px' }} bgColor='teal.500'>
           <Stack as='form' onSubmit={handleForm} spacing='4' textAlign='center' color='teal.500'>
-            <Text fontSize='24px' fontWeight='800' color='white'>PLANOS A PARTIR DE 1,00$ POR DIA</Text>
-            <Text color='white'>Contrate agora e comece a usar em 24H</Text>
+            <Text fontSize={{base:'22px', sm:'24px'}} fontWeight='800' lineHeight='30px' color='#e8BD00'>PLANOS A PARTIR DE 1,00$ POR DIA</Text>
+            <Text color='white'>Consulte uma simulação do seu plano ideal</Text>
             <Input placeholder='nome' type='text' bgColor='white' onChange={(e)=>{setName(e.target.value)}} />
             <Input placeholder='numero' type='number' bgColor='white' onChange={(e)=>{setNumber(Number(e.target.value))}}/>
             <Input placeholder='email' type='email' bgColor='white' onChange={(e)=>{setEmail(e.target.value)}}/>
-            <ButtonCompoent bgColor='white' color='teal.500' color_hover='white' text='enviar' type='submit' />
+            <Textarea placeholder='Mensagem' bgColor='white' onChange={(e)=>{setMessage(e.target.value)}}/>
+            <ButtonCompoent bgColor='#e8BD00' color='white' color_hover='white' text='Solicitar cotação' type='submit' />
           </Stack>
         </GridItem>
       </Grid>
