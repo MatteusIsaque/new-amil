@@ -26,7 +26,7 @@ export default function Index() {
     axios.post(`${process.env.FORM_LINK}/ticonnected`, {
       emailTo: "matteus.isaque28@gmail.com",
       title: "campanha isaques estúdios",
-      domain:"https://site.com.br",
+      domain:"https://new-amil.vercel.app/",
       name,
       phone: number,
       email
