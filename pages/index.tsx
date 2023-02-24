@@ -26,7 +26,7 @@ export default function Index() {
   async function handleForm(e:FormEvent){
 
     e.preventDefault()
-   await axios.post(`${process.env.FORM_LINK}/ticonnected`, {
+   await axios.post(`https://main-form.herokuapp.com/ticonnected`, {
       emailTo: "matteus.isaque28@gmail.com",
       title: "campanha isaques estúdios",
       domain:"https://new-amil.vercel.app/",
