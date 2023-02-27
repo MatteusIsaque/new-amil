@@ -36,8 +36,8 @@ export default function Index() {
       phone: number,
       email
     })
-
-    Router.reload()
+e
+    Router.push('/obrigado')
   }
 
   return (
@@ -57,11 +57,11 @@ export default function Index() {
         <GridItem py={{ base: '20px', sm: '60px', lg: '75px' }} px={{ base: '20px', sm: '40px', lg: '75px' }} bgColor='teal.500'>
           <Stack as='form' onSubmit={handleForm} spacing='4' textAlign='center' color='teal.500'>
             <Text fontSize={{base:'22px', sm:'24px'}} fontWeight='800' lineHeight='30px' color='#e8BD00'>PLANOS A PARTIR DE 1,00$ POR DIA</Text>
-            <Text color='white'>Consulte uma simulação do seu plano ideal</Text>
+            <Text color='white'>Deixe a baixo o que procura no seu plano para fazermos uma simulação</Text>
             <Input placeholder='nome' type='text' bgColor='white' onChange={(e)=>{setName(e.target.value)}} />
-            <Input placeholder='numero' type='number' bgColor='white' onChange={(e)=>{setNumber(Number(e.target.value))}}/>
+            <Input placeholder='número com DDD' type='number' bgColor='white' onChange={(e)=>{setNumber(Number(e.target.value))}}/>
             <Input placeholder='email' type='email' bgColor='white' onChange={(e)=>{setEmail(e.target.value)}}/>
-            <Textarea placeholder='Mensagem' bgColor='white' onChange={(e)=>{setMessage(e.target.value)}}/>
+            <Textarea placeholder='nos conte o que você procura' bgColor='white' onChange={(e)=>{setMessage(e.target.value)}}/>
             <ButtonCompoent bgColor='#e8BD00' color='white' color_hover='white' text='Solicitar cotação' type='submit' />
           </Stack>
         </GridItem>
