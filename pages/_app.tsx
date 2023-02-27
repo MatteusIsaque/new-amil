@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     const tagManagerArgs = {
-      gtmId: 'GTM-M5J8FT3'
+      gtmId: 'GTM-MZDR9GH'
     }
 
 
